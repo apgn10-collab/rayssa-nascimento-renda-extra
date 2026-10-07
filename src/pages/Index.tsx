@@ -4,6 +4,7 @@ import { NewsTicker } from '@/components/landing/NewsTicker'
 import { HowItWorks } from '@/components/landing/HowItWorks'
 import { ReferralBlock } from '@/components/landing/ReferralBlock'
 import { FeaturedNews } from '@/components/landing/FeaturedNews'
+import { RealTasksSegments } from '@/components/landing/RealTasksSegments'
 import { RobotShowcase } from '@/components/landing/RobotShowcase'
 import { GlobalPress } from '@/components/landing/GlobalPress'
 import { PaymentProofs } from '@/components/landing/PaymentProofs'
@@ -17,6 +18,13 @@ export default function Index() {
       <Header logoUrl={LANDING_IMAGES.logo.url} />
       <Hero heroBgUrl={LANDING_IMAGES.heroBg.url} />
       <NewsTicker />
+      {/* Nova Seção de Segmentos com Foto 2 (Rotina/Dog Walk) e Foto 3 (Hotelaria/Enxoval) */}
+      <RealTasksSegments
+        dogWalkImg={LANDING_IMAGES.dogWalkRoutine.url}
+        hotelImg={LANDING_IMAGES.hotelHospitality.url}
+        slot1Img={LANDING_IMAGES.slotUpcoming1.url}
+        slot2Img={LANDING_IMAGES.slotUpcoming2.url}
+      />
       <HowItWorks
         step1Img={LANDING_IMAGES.step1.url}
         step1Thumb={LANDING_IMAGES.step1.thumb}

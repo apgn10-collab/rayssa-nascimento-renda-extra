@@ -28,44 +28,45 @@ export const Hero = ({ heroBgUrl }: HeroProps) => {
           className="absolute -top-32 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#00e5ff]/15 rounded-full blur-[100px] pointer-events-none"
         />
 
-        {/* HERO IMAGE CONTAINER - Showcase principal em alta visibilidade */}
-        <div className="relative w-full aspect-[16/9] max-h-[580px] bg-[#02060c] overflow-hidden group">
-          <img
-            src={heroBgUrl}
-            alt="Renda Extra com Rayssa Nascimento — filmando tarefas residenciais e comerciais com celular acoplado na cabeça para treinar robôs com inteligência artificial"
-            className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.02]"
-            loading="eager"
-            fetchPriority="high"
-          />
+        {/* HERO IMAGE CONTAINER - Showcase da Foto 1 com proporção natural para preservar os textos embutidos */}
+        <div className="relative w-full max-w-[720px] mx-auto bg-[#02060c] overflow-hidden group rounded-t-3xl">
+          <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] max-h-[700px] mx-auto flex items-center justify-center bg-[#070b12]">
+            <img
+              src={heroBgUrl}
+              alt="Sua rotina pode treinar o futuro — tarefas reais, dados para IA física com Rayssa Nascimento"
+              className="w-full h-full object-contain sm:object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.01]"
+              loading="eager"
+              fetchPriority="high"
+            />
 
-          {/* Vignette & bottom gradient blend into action section */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#080d15] via-transparent to-black/20 pointer-events-none" />
-          <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-t-3xl pointer-events-none" />
+            {/* Suave vinheta perimetral sem cobrir os textos da arte */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#080d15] via-transparent to-black/30 pointer-events-none" />
+            <div className="absolute inset-0 ring-1 ring-inset ring-white/10 pointer-events-none" />
 
-          {/* Floating Pill on the image (Live Status) */}
-          <div className="absolute top-3 left-3 sm:top-5 sm:left-5 z-20 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/70 backdrop-blur-md border border-[#00ff88]/40 text-xs sm:text-sm font-semibold text-white shadow-lg">
-            <span className="w-2 h-2 rounded-full bg-[#00ff88] animate-ping" />
-            <span className="text-[#00ff88]">Vagas Abertas</span>
-            <span className="text-white/60 text-xs">• 70+ Países</span>
-          </div>
+            {/* Badges sutis no topo da imagem */}
+            <div className="absolute top-3 left-3 sm:top-5 sm:left-5 z-20 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/75 backdrop-blur-md border border-[#00ff88]/40 text-xs sm:text-sm font-semibold text-white shadow-lg">
+              <span className="w-2 h-2 rounded-full bg-[#00ff88] animate-pulse" />
+              <span className="text-[#00ff88]">Vagas Abertas</span>
+              <span className="text-white/70 text-xs">• Brasil &amp; 70+ Países</span>
+            </div>
 
-          <div className="absolute top-3 right-3 sm:top-5 sm:right-5 z-20 hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/70 backdrop-blur-md border border-[#00e5ff]/40 text-xs font-semibold text-[#00e5ff] shadow-lg">
-            <span>Treinamento de Robôs com IA</span>
+            <div className="absolute top-3 right-3 sm:top-5 sm:right-5 z-20 hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/75 backdrop-blur-md border border-[#38bdf8]/40 text-xs font-semibold text-[#38bdf8] shadow-lg">
+              <span>IA Física &amp; Robótica</span>
+            </div>
           </div>
         </div>
 
-        {/* Bottom Hero Body: Explanation & High-converting CTA without conflicting with text inside the image */}
-        <div className="relative z-10 px-4 sm:px-8 pt-6 pb-8 sm:pb-10 text-center max-w-[860px] mx-auto bg-[#080d15]">
+        {/* Bottom Hero Body: Explanation & High-converting CTA posicionados logo abaixo da imagem */}
+        <div className="relative z-10 px-4 sm:px-8 pt-6 pb-8 sm:pb-10 text-center max-w-[860px] mx-auto bg-[#080d15] border-t border-white/5">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight mb-3 text-white">
-            Transforme afazeres simples em{' '}
-            <span className="text-[#00ff88] drop-shadow-[0_0_18px_rgba(0,255,136,0.6)]">
-              dinheiro no seu bolso
-            </span>
+            Sua rotina doméstica agora é{' '}
+            <span className="text-[#00ff88]">remunerada em dólar e Pix</span>
           </h1>
 
-          <p className="text-sm sm:text-lg text-[#cbd5e1] leading-relaxed mb-6 max-w-[680px] mx-auto font-normal">
-            Grave suas tarefas do dia a dia com a câmera do smartphone e receba pagamentos em dólar
-            ou Pix para abastecer a visão de novos robôs inteligentes.
+          <p className="text-sm sm:text-lg text-[#cbd5e1] leading-relaxed mb-6 max-w-[700px] mx-auto font-normal">
+            A IA física precisa de <strong>movimentos humanos reais</strong> para aprender tarefas
+            básicas. Grave suas atividades cotidianas com o suporte de cabeça no celular e receba
+            até <strong>US$ 7 por hora</strong>.
           </p>
 
           {/* CTA Buttons Group */}

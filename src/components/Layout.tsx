@@ -28,36 +28,36 @@ export const Layout = ({ children }: LayoutProps) => {
     <div className="relative min-h-screen bg-[#07090e] text-[#f1f5f9] font-sans antialiased selection:bg-[#00ff88]/30 selection:text-[#00ff88]">
       {/* 1. Reading Progress Bar */}
       <div
-        className="fixed top-0 left-0 h-[3px] z-[9999] pointer-events-none transition-[width] duration-100 ease-out"
+        className="fixed top-0 left-0 h-[2.5px] z-[9999] pointer-events-none transition-[width] duration-100 ease-out"
         style={{
           width: `${scrollProgress}%`,
-          background: 'linear-gradient(90deg, #00ff88, #00e5ff)',
-          boxShadow: '0 0 10px rgba(0, 255, 136, 0.8), 0 0 20px rgba(0, 229, 255, 0.6)',
+          background: 'linear-gradient(90deg, #00ff88, #38bdf8)',
+          boxShadow: '0 0 8px rgba(0, 255, 136, 0.5)',
         }}
         aria-hidden="true"
       />
 
-      {/* 2. Tech Grid Background Overlay */}
+      {/* 2. Tech Grid Background Overlay Suavizado */}
       <div
-        className="fixed inset-0 pointer-events-none z-0 opacity-25"
+        className="fixed inset-0 pointer-events-none z-0 opacity-15"
         style={{
-          backgroundSize: '40px 40px',
+          backgroundSize: '48px 48px',
           backgroundImage:
-            'linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px)',
-          maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)',
-          WebkitMaskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)',
+            'linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px)',
+          maskImage: 'radial-gradient(ellipse at center, black 30%, transparent 80%)',
+          WebkitMaskImage: 'radial-gradient(ellipse at center, black 30%, transparent 80%)',
         }}
         aria-hidden="true"
       />
 
-      {/* Ambient background glows */}
+      {/* Ambient background glows suaves e equilibrados */}
       <div
         className="fixed inset-0 pointer-events-none z-0 overflow-hidden"
         style={{
           backgroundImage: `
-            radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 229, 255, 0.14), transparent),
-            radial-gradient(circle 600px at 80% 20%, rgba(0, 255, 136, 0.08), transparent),
-            radial-gradient(circle 500px at 10% 80%, rgba(0, 229, 255, 0.08), transparent)
+            radial-gradient(ellipse 80% 50% at 50% -20%, rgba(56, 189, 248, 0.08), transparent),
+            radial-gradient(circle 600px at 80% 20%, rgba(0, 255, 136, 0.05), transparent),
+            radial-gradient(circle 500px at 10% 80%, rgba(56, 189, 248, 0.05), transparent)
           `,
         }}
         aria-hidden="true"

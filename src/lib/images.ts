@@ -51,12 +51,41 @@ export const LANDING_IMAGES = {
     // Avatar / Logo circular no header (~70x70)
     thumb: getFileUrl('ezupxqgn9idesxp', 'logo_fpf5eun48d.jpg', '160x160'),
   },
+  // Nova Foto 1: Mãos dobrando camiseta azul com overlay IA ("Sua rotina pode treinar o futuro")
   heroBg: {
     recordId: 'makqmcwi65rllwk',
-    filename: 'hero_bg_6iqeoy4vnk.png',
-    url: new URL('../assets/imagemgerada1791407667490-15f6d.png', import.meta.url).href,
-    thumb: new URL('../assets/imagemgerada1791407667490-15f6d.png', import.meta.url).href,
+    filename: 'imagemgerada1791409240317-1b3c0.png',
+    url: new URL('../assets/imagemgerada1791409240317-1b3c0.png', import.meta.url).href,
+    thumb: new URL('../assets/imagemgerada1791409240317-1b3c0.png', import.meta.url).href,
     fallbackUrl: getFileUrl('makqmcwi65rllwk', 'hero_bg_6iqeoy4vnk.png'),
+  },
+  // Nova Foto 2: POV passeio com cachorro ("Sua rotina ajuda a IA física a entender o mundo real")
+  dogWalkRoutine: {
+    recordId: 'dog_walk_routine_local',
+    filename: 'imagemgerada1791409238291-239b7.png',
+    url: new URL('../assets/imagemgerada1791409238291-239b7.png', import.meta.url).href,
+    thumb: new URL('../assets/imagemgerada1791409238291-239b7.png', import.meta.url).href,
+  },
+  // Nova Foto 3: Camareiras de hotelaria ("Hotelaria: Sua equipe pode participar")
+  hotelHospitality: {
+    recordId: 'hotel_hospitality_local',
+    filename: 'imagemgerada1791409236463-aaec7.png',
+    url: new URL('../assets/imagemgerada1791409236463-aaec7.png', import.meta.url).href,
+    thumb: new URL('../assets/imagemgerada1791409236463-aaec7.png', import.meta.url).href,
+  },
+  // Slot reservado 1: Próxima imagem a ser enviada pelo usuário (ex: cozinha / culinária / escritório)
+  slotUpcoming1: {
+    recordId: 'slot_upcoming_1',
+    filename: 'slot_upcoming_1.png',
+    url: '', // Aguardando upload da 4ª foto do usuário
+    thumb: '',
+  },
+  // Slot reservado 2: Próxima imagem a ser enviada pelo usuário (ex: organização / logística / comércio)
+  slotUpcoming2: {
+    recordId: 'slot_upcoming_2',
+    filename: 'slot_upcoming_2.png',
+    url: '', // Aguardando upload da 5ª foto do usuário
+    thumb: '',
   },
   step1: {
     recordId: 'g5ckaj4e4ncu2q7',
