@@ -6,47 +6,70 @@ interface HeroProps {
 
 export const Hero = ({ heroBgUrl }: HeroProps) => {
   return (
-    <section className="pt-6 pb-12">
-      <div className="relative rounded-3xl overflow-hidden border border-[#00ff88]/25 bg-[#0a0f17] shadow-[0_20px_50px_rgba(0,0,0,0.7),0_0_35px_rgba(0,255,136,0.1)]">
-        {/* Background Image */}
-        <img
-          src={heroBgUrl}
-          alt="Mulher filmando tarefas do cotidiano na cozinha com celular acoplado na cabeça"
-          className="absolute inset-0 w-full h-full object-cover object-[center_30%] opacity-30 saturate-110 contrast-110 pointer-events-none"
-          loading="eager"
+    <section className="pt-4 sm:pt-6 pb-10 sm:pb-12">
+      {/* Top badges */}
+      <div className="mb-4 sm:mb-5 flex items-center justify-center gap-2.5 flex-wrap">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-[#00ff88]/10 border border-[#00ff88]/40 text-[#00ff88] shadow-[0_0_16px_rgba(0,255,136,0.35)]">
+          <span>✅ Novidade em alta</span>
+          <span className="w-1.5 h-1.5 rounded-full bg-[#00ff88] shadow-[0_0_8px_#00ff88] animate-pulse-dot" />
+        </div>
+
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-medium bg-[#00e5ff]/10 border border-[#00e5ff]/35 text-[#e2e8f0] shadow-[0_0_10px_rgba(0,229,255,0.18)]">
+          <span className="text-[#00e5ff]">✦</span>
+          <span>Iniciativa Geração Alpha × Mimix</span>
+        </div>
+      </div>
+
+      {/* Main Hero Card with prominent Visual Art / Banner */}
+      <div className="relative rounded-3xl overflow-hidden border border-[#00ff88]/30 bg-[#080d15] shadow-[0_20px_60px_rgba(0,0,0,0.85),0_0_40px_rgba(0,255,136,0.15)]">
+        {/* Ambient glow in background card */}
+        <div
+          aria-hidden="true"
+          className="absolute -top-32 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#00e5ff]/15 rounded-full blur-[100px] pointer-events-none"
         />
 
-        {/* Content with Gradient Overlay */}
-        <div className="relative z-10 px-4 sm:px-8 py-12 sm:py-16 text-center max-w-[860px] mx-auto bg-gradient-to-b from-[#07090e]/80 via-[#07090e]/92 to-[#07090e]/98">
-          {/* Selos / Badges */}
-          <div className="mb-5 flex items-center justify-center gap-2.5 flex-wrap">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-[#00ff88]/10 border border-[#00ff88]/40 text-[#00ff88] shadow-[0_0_16px_rgba(0,255,136,0.35)]">
-              <span>✅ Isso está nas notícias</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-[#00ff88] shadow-[0_0_8px_#00ff88] animate-pulse-dot" />
-            </div>
+        {/* HERO IMAGE CONTAINER - Showcase principal em alta visibilidade */}
+        <div className="relative w-full aspect-[16/9] max-h-[580px] bg-[#02060c] overflow-hidden group">
+          <img
+            src={heroBgUrl}
+            alt="Renda Extra com Rayssa Nascimento — filmando tarefas residenciais e comerciais com celular acoplado na cabeça para treinar robôs com inteligência artificial"
+            className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+            loading="eager"
+            fetchPriority="high"
+          />
 
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-medium bg-[#00e5ff]/5 border border-[#00e5ff]/35 text-[#94a3b8] shadow-[0_0_10px_rgba(0,229,255,0.12)]">
-              <span className="text-[#00e5ff]">✦</span>
-              <span>Uma iniciativa Geração Alpha</span>
-            </div>
+          {/* Vignette & bottom gradient blend into action section */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#080d15] via-transparent to-black/20 pointer-events-none" />
+          <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-t-3xl pointer-events-none" />
+
+          {/* Floating Pill on the image (Live Status) */}
+          <div className="absolute top-3 left-3 sm:top-5 sm:left-5 z-20 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/70 backdrop-blur-md border border-[#00ff88]/40 text-xs sm:text-sm font-semibold text-white shadow-lg">
+            <span className="w-2 h-2 rounded-full bg-[#00ff88] animate-ping" />
+            <span className="text-[#00ff88]">Vagas Abertas</span>
+            <span className="text-white/60 text-xs">• 70+ Países</span>
           </div>
 
-          {/* H1 Headline */}
-          <h1 className="text-3xl sm:text-5xl md:text-[3.3rem] font-extrabold leading-[1.15] mb-5 tracking-tight text-white">
-            Ganhe dinheiro extra <br />
-            <span className="text-[#00ff88] drop-shadow-[0_0_16px_rgba(0,255,136,0.5)]">
-              gravando o seu dia a dia
+          <div className="absolute top-3 right-3 sm:top-5 sm:right-5 z-20 hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/70 backdrop-blur-md border border-[#00e5ff]/40 text-xs font-semibold text-[#00e5ff] shadow-lg">
+            <span>Treinamento de Robôs com IA</span>
+          </div>
+        </div>
+
+        {/* Bottom Hero Body: Explanation & High-converting CTA without conflicting with text inside the image */}
+        <div className="relative z-10 px-4 sm:px-8 pt-6 pb-8 sm:pb-10 text-center max-w-[860px] mx-auto bg-[#080d15]">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight mb-3 text-white">
+            Transforme afazeres simples em{' '}
+            <span className="text-[#00ff88] drop-shadow-[0_0_18px_rgba(0,255,136,0.6)]">
+              dinheiro no seu bolso
             </span>
           </h1>
 
-          {/* Subtitle */}
-          <p className="text-base sm:text-xl text-[#cbd5e1] leading-relaxed mb-8 max-w-[650px] mx-auto">
-            Big techs pagam para você filmar afazeres simples com o smartphone para treinar robôs
-            humanoides.
+          <p className="text-sm sm:text-lg text-[#cbd5e1] leading-relaxed mb-6 max-w-[680px] mx-auto font-normal">
+            Grave suas tarefas do dia a dia com a câmera do smartphone e receba pagamentos em dólar
+            ou Pix para abastecer a visão de novos robôs inteligentes.
           </p>
 
           {/* CTA Buttons Group */}
-          <div className="flex flex-col sm:flex-row gap-3.5 justify-center items-center flex-wrap mb-3">
+          <div className="flex flex-col sm:flex-row gap-3.5 justify-center items-center flex-wrap mb-4">
             <a
               href={LANDING_LINKS.whatsappGroup}
               target="_blank"
@@ -54,7 +77,7 @@ export const Hero = ({ heroBgUrl }: HeroProps) => {
               className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-extrabold text-base text-[#021a0e] bg-gradient-to-br from-[#00ff88] to-[#00d26a] shadow-[0_0_25px_rgba(0,255,136,0.5)] transition-all duration-200 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_0_45px_rgba(0,255,136,0.9),0_0_70px_rgba(0,229,255,0.5)] animate-glow-pulse"
               aria-label="Quero participar pelo suporte gratuito no WhatsApp"
             >
-              <span>Quero participar</span>
+              <span>Começar agora pelo WhatsApp</span>
               <svg
                 width="20"
                 height="20"
@@ -69,9 +92,9 @@ export const Hero = ({ heroBgUrl }: HeroProps) => {
 
             <a
               href="#comprovantes"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm sm:text-base text-[#e2e8f0] bg-[#0f172a]/70 border border-[#00e5ff]/45 backdrop-blur-md transition-all duration-200 hover:border-[#00e5ff] hover:text-[#00e5ff] hover:shadow-[0_0_20px_rgba(0,229,255,0.3)] hover:-translate-y-0.5"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm sm:text-base text-[#e2e8f0] bg-[#0f172a]/80 border border-[#00e5ff]/45 backdrop-blur-md transition-all duration-200 hover:border-[#00e5ff] hover:text-[#00e5ff] hover:shadow-[0_0_20px_rgba(0,229,255,0.3)] hover:-translate-y-0.5"
             >
-              <span>Ver comprovação</span>
+              <span>Ver comprovantes de saque</span>
               <svg
                 width="16"
                 height="16"
@@ -85,16 +108,16 @@ export const Hero = ({ heroBgUrl }: HeroProps) => {
             </a>
           </div>
 
-          <p className="text-xs sm:text-sm text-[#94a3b8] mb-6">
-            Suporte gratuito no WhatsApp — receba os vídeos ensinando a se cadastrar passo a passo
+          <p className="text-xs sm:text-sm text-[#94a3b8] mb-5">
+            Suporte 100% gratuito no WhatsApp — passo a passo detalhado para cadastro e aprovação
           </p>
 
           {/* Micro-dados visuais */}
-          <div className="inline-flex items-center gap-2 sm:gap-3 px-4 py-2 rounded-full bg-black/45 border border-[#00ff88]/20 text-xs sm:text-sm text-[#94a3b8]">
+          <div className="inline-flex items-center gap-2 sm:gap-3 px-4 py-2 rounded-full bg-black/50 border border-[#00ff88]/20 text-xs sm:text-sm text-[#94a3b8] flex-wrap justify-center">
             <span className="text-[#00ff88] font-bold">● Vagas abertas</span>
-            <span className="opacity-40">|</span>
+            <span className="opacity-40 hidden sm:inline">|</span>
             <span>Atendimento via WhatsApp</span>
-            <span className="opacity-40">|</span>
+            <span className="opacity-40 hidden sm:inline">|</span>
             <span className="text-[#00e5ff]">Brasil e 70+ países</span>
           </div>
         </div>

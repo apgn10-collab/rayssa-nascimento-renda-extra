@@ -54,9 +54,9 @@ export const LANDING_IMAGES = {
   heroBg: {
     recordId: 'makqmcwi65rllwk',
     filename: 'hero_bg_6iqeoy4vnk.png',
-    url: getFileUrl('makqmcwi65rllwk', 'hero_bg_6iqeoy4vnk.png'),
-    // Fundo hero otimizado para não baixar 1.8MB em conexões lentas se thumb for desejado
-    thumb: getFileUrl('makqmcwi65rllwk', 'hero_bg_6iqeoy4vnk.png', '1200x0'),
+    url: new URL('../assets/imagemgerada1791407667490-15f6d.png', import.meta.url).href,
+    thumb: new URL('../assets/imagemgerada1791407667490-15f6d.png', import.meta.url).href,
+    fallbackUrl: getFileUrl('makqmcwi65rllwk', 'hero_bg_6iqeoy4vnk.png'),
   },
   step1: {
     recordId: 'g5ckaj4e4ncu2q7',
