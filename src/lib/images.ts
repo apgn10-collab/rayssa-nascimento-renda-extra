@@ -47,6 +47,8 @@ export function getFileUrl(recordId: string, filename: string, thumb?: string): 
 import cnnCoverImg from '../assets/captura-de-tela-2026-10-07-191838-cdf91.png'
 import tecmundoEstadaoCoverImg from '../assets/captura-de-tela-2026-10-07-191956-93749.png'
 import diarioNordesteCoverImg from '../assets/captura-de-tela-2026-10-07-192027-116b2.png'
+import rayssaPortraitImg from '../assets/4-6c579.jpeg'
+import payoutPixUsdtImg from '../assets/imagemgerada1791414158612-d8c4a.png'
 
 export const LANDING_IMAGES = {
   newsCovers: {
@@ -54,12 +56,13 @@ export const LANDING_IMAGES = {
     tecmundoEstadao: tecmundoEstadaoCoverImg,
     diarioNordeste: diarioNordesteCoverImg,
   },
+  // Foto de retrato oficial de Rayssa Nascimento (substituindo o antigo monograma/placeholder RN)
   logo: {
-    recordId: 'ezupxqgn9idesxp',
-    filename: 'logo_fpf5eun48d.jpg',
-    url: getFileUrl('ezupxqgn9idesxp', 'logo_fpf5eun48d.jpg'),
-    // Avatar / Logo circular no header (~70x70)
-    thumb: getFileUrl('ezupxqgn9idesxp', 'logo_fpf5eun48d.jpg', '160x160'),
+    recordId: 'rayssa_nascimento_portrait',
+    filename: '4-6c579.jpeg',
+    url: rayssaPortraitImg,
+    thumb: rayssaPortraitImg,
+    fallbackUrl: getFileUrl('ezupxqgn9idesxp', 'logo_fpf5eun48d.jpg'),
   },
   // Hero Original: Arte sci-fi neon (imagemgerada1791407667490-15f6d.png)
   heroBg: {
@@ -120,12 +123,12 @@ export const LANDING_IMAGES = {
     url: new URL('../assets/1-0dcd3.jpeg', import.meta.url).href,
     thumb: new URL('../assets/1-0dcd3.jpeg', import.meta.url).href,
   },
-  // Passo 3 de "Como Funciona": Arte "PAGAMENTO VIA PIX / PAGAMENTO VIA USDT" (dias 08 e 20)
+  // Passo 3 de "Como Funciona": Nova Arte "PAGAMENTO VIA PIX / PAGAMENTO VIA USDT" (dias 08 e 20 de cada mês)
   howItWorksPayoutPixUsdt: {
     recordId: 'payout_pix_usdt_art',
-    filename: 'imagemgerada1791413124291-636fa.png',
-    url: new URL('../assets/imagemgerada1791413124291-636fa.png', import.meta.url).href,
-    thumb: new URL('../assets/imagemgerada1791413124291-636fa.png', import.meta.url).href,
+    filename: 'imagemgerada1791414158612-d8c4a.png',
+    url: payoutPixUsdtImg,
+    thumb: payoutPixUsdtImg,
   },
   step1: {
     recordId: 'g5ckaj4e4ncu2q7',
@@ -141,9 +144,9 @@ export const LANDING_IMAGES = {
   },
   step3Payout: {
     recordId: 'qaqdk3hteozqt7y',
-    filename: 'imagemgerada1791413124291-636fa.png',
-    url: new URL('../assets/imagemgerada1791413124291-636fa.png', import.meta.url).href,
-    thumb: new URL('../assets/imagemgerada1791413124291-636fa.png', import.meta.url).href,
+    filename: 'imagemgerada1791414158612-d8c4a.png',
+    url: payoutPixUsdtImg,
+    thumb: payoutPixUsdtImg,
   },
   robotPhoto: {
     recordId: 'robot_holograms_office',

@@ -23,8 +23,8 @@ export const Header = ({ logoUrl }: HeaderProps) => {
               {!logoError ? (
                 <img
                   src={logoUrl}
-                  alt="Logo Rayssa Nascimento Renda Extra"
-                  className="w-full h-full object-cover object-[center_30%] block rounded-full"
+                  alt="Rayssa Nascimento — Renda Extra"
+                  className="w-full h-full object-cover object-[center_20%] block rounded-full"
                   loading="eager"
                   onError={() => setLogoError(true)}
                 />

@@ -174,8 +174,8 @@ export const HowItWorks = ({
               {!err3 ? (
                 <img
                   src={step3Thumb || step3Img}
-                  alt="Regras de pagamento oficial: Pagamento via Pix ou USDT mediante vídeos aprovados todo dia 08 e 20"
-                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  alt="Regras de pagamento oficial: Pagamento via Pix ou USDT mediante vídeos aprovados todo dia 08 e 20 de cada mês"
+                  className="w-full h-full object-contain p-1.5 transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                   onError={(e) => {
                     const target = e.currentTarget
