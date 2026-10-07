@@ -1,12 +1,37 @@
-/* Home Page - Replace this page layout, components, content, behavior with what you want and translate to the language of the user */
-const Index = () => {
+import { Header } from '@/components/landing/Header'
+import { Hero } from '@/components/landing/Hero'
+import { NewsTicker } from '@/components/landing/NewsTicker'
+import { HowItWorks } from '@/components/landing/HowItWorks'
+import { ReferralBlock } from '@/components/landing/ReferralBlock'
+import { FeaturedNews } from '@/components/landing/FeaturedNews'
+import { RobotShowcase } from '@/components/landing/RobotShowcase'
+import { GlobalPress } from '@/components/landing/GlobalPress'
+import { PaymentProofs } from '@/components/landing/PaymentProofs'
+import { StatsAndSimulator } from '@/components/landing/StatsAndSimulator'
+import { FinalConversion } from '@/components/landing/FinalConversion'
+import { LANDING_IMAGES, LANDING_PROOFS } from '@/lib/images'
+
+export default function Index() {
   return (
-    <div className="container mx-auto py-8 px-4">
-      <h1 className="text-3xl font-bold mb-6">
-        This is a example page ready to be rewritten with your own content
-      </h1>
-    </div>
+    <>
+      <Header logoUrl={LANDING_IMAGES.logo.url} />
+      <Hero heroBgUrl={LANDING_IMAGES.heroBg.url} />
+      <NewsTicker />
+      <HowItWorks
+        step1Img={LANDING_IMAGES.step1.url}
+        step1Thumb={LANDING_IMAGES.step1.thumb}
+        step2Img={LANDING_IMAGES.step2Minute.url}
+        step2Thumb={LANDING_IMAGES.step2Minute.thumb}
+        step3Img={LANDING_IMAGES.step3Payout.url}
+        step3Thumb={LANDING_IMAGES.step3Payout.thumb}
+      />
+      <ReferralBlock />
+      <FeaturedNews />
+      <RobotShowcase robotPhotoUrl={LANDING_IMAGES.robotPhoto.url} />
+      <GlobalPress />
+      <PaymentProofs proofs={LANDING_PROOFS} />
+      <StatsAndSimulator />
+      <FinalConversion finalBgUrl={LANDING_IMAGES.finalBg.url} />
+    </>
   )
 }
-
-export default Index

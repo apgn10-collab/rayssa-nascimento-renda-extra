@@ -1,7 +1,6 @@
 /* Global styles - Theme, font, utilities, animations and global components */
 
-/* CHANGE THE FONT BELOW TO WHATEVER YOU WANT */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,36 +8,51 @@
 
 @layer base {
   :root {
-    /* Change the colors to match the design system */
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --accent-neon: #00ff88;
+    --accent-neon-text: #00ff88;
+    --accent-contrast: #021a0e;
+    --cyan-neon: #00e5ff;
+    --cyan-glow: rgba(0, 229, 255, 0.25);
+    --green-glow: rgba(0, 255, 136, 0.35);
+    --bg-dark: #07090e;
+    --surface-dark: #0f141c;
+    --surface-card-dark: #141b26;
+    --border-dark: #1e293b;
+    --border-glow: rgba(0, 255, 136, 0.45);
+    --text-light: #f1f5f9;
+    --text-muted-dark: #94a3b8;
+    --font-mono: 'JetBrains Mono', monospace;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Theme colors */
+    --background: 224 33% 4%;
+    --foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --card: 222 30% 8%;
+    --card-foreground: 210 40% 98%;
 
-    --primary: 222.2 84% 4.9%;
-    --primary-foreground: 210 40% 98%;
+    --popover: 222 30% 8%;
+    --popover-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 98%;
-    --secondary-foreground: 222.2 84% 4.9%;
+    --primary: 153 100% 50%;
+    --primary-foreground: 154 87% 5%;
 
-    --muted: 210 40% 98%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
 
-    --accent: 210 40% 98%;
-    --accent-foreground: 222.2 84% 4.9%;
+    --muted: 217 33% 14%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 33% 14%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 153 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -287,4 +301,188 @@
   .animate-spotlight {
     animation: spotlight 2s ease forwards;
   }
+}
+
+/* Custom Neon & Landing Page Keyframe Animations */
+@keyframes neonPulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 20px rgba(0, 255, 136, 0.45),
+      0 0 40px rgba(0, 255, 136, 0.2);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow:
+      0 0 35px rgba(0, 255, 136, 0.8),
+      0 0 60px rgba(0, 229, 255, 0.4);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes neonStepPulse {
+  0%,
+  100% {
+    border-color: rgba(0, 255, 136, 0.7);
+    box-shadow:
+      0 0 25px rgba(0, 255, 136, 0.3),
+      0 10px 35px rgba(0, 0, 0, 0.8);
+  }
+  50% {
+    border-color: #00ff88;
+    box-shadow:
+      0 0 45px rgba(0, 255, 136, 0.75),
+      0 0 65px rgba(0, 229, 255, 0.35),
+      0 15px 45px rgba(0, 0, 0, 0.9);
+  }
+}
+
+@keyframes neonStep3Glow {
+  0%,
+  100% {
+    border-color: rgba(0, 255, 136, 0.75);
+    box-shadow:
+      0 0 20px rgba(0, 255, 136, 0.35),
+      0 10px 30px rgba(0, 0, 0, 0.7);
+  }
+  50% {
+    border-color: #00ff88;
+    box-shadow:
+      0 0 35px rgba(0, 255, 136, 0.75),
+      0 0 50px rgba(0, 229, 255, 0.3),
+      0 14px 38px rgba(0, 0, 0, 0.85);
+  }
+}
+
+@keyframes arrowFlowPulse {
+  0%,
+  100% {
+    transform: translateX(0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateX(4px);
+    opacity: 1;
+    text-shadow: 0 0 24px rgba(0, 229, 255, 0.9);
+  }
+}
+
+@keyframes pulseFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes goldPulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 25px rgba(251, 191, 36, 0.22),
+      0 10px 30px rgba(0, 0, 0, 0.6);
+    border-color: rgba(251, 191, 36, 0.8);
+  }
+  50% {
+    box-shadow:
+      0 0 45px rgba(251, 191, 36, 0.5),
+      0 0 60px rgba(0, 255, 136, 0.2);
+    border-color: #fde047;
+  }
+}
+
+@keyframes titleGlowPulse {
+  0%,
+  100% {
+    text-shadow:
+      0 0 14px rgba(0, 255, 136, 0.4),
+      0 0 28px rgba(0, 255, 136, 0.2);
+    color: #00ff88;
+  }
+  50% {
+    text-shadow:
+      0 0 28px rgba(0, 255, 136, 0.9),
+      0 0 50px rgba(0, 229, 255, 0.6);
+    color: #55ffb2;
+  }
+}
+
+@keyframes tickerLoop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes proofMarqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-pulse-dot {
+  animation: neonPulse 1.8s infinite;
+}
+
+.animate-glow-pulse {
+  animation: glowPulse 2.2s infinite;
+}
+
+.animate-neon-step-pulse {
+  animation: neonStepPulse 2.6s ease-in-out infinite;
+}
+
+.animate-neon-step3-glow {
+  animation: neonStep3Glow 2.4s ease-in-out infinite;
+}
+
+.animate-arrow-flow {
+  animation: arrowFlowPulse 2.2s ease-in-out infinite;
+}
+
+.animate-pulse-float {
+  animation: pulseFloat 3s ease-in-out infinite;
+}
+
+.animate-gold-pulse {
+  animation: goldPulse 3.5s ease-in-out infinite;
+}
+
+.animate-title-glow {
+  animation: titleGlowPulse 2.4s ease-in-out infinite;
+}
+
+.animate-ticker {
+  animation: tickerLoop 32s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+.animate-proof-marquee {
+  animation: proofMarqueeScroll 24s linear infinite;
+}
+
+.animate-proof-marquee:hover {
+  animation-play-state: paused;
 }
