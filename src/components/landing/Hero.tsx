@@ -30,21 +30,28 @@ export const Hero = ({ heroBgUrl }: HeroProps) => {
 
         {/* HERO IMAGE CONTAINER - Arte Sci-Fi Neon Original (imagemgerada1791407667490-15f6d.png) */}
         <div className="relative w-full overflow-hidden group rounded-t-3xl bg-[#030712]">
-          <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] md:aspect-[21/9] max-h-[580px] flex items-center justify-center overflow-hidden">
+          {/* Subtle blurred neon ambient background from the image itself to eliminate empty borders */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 scale-110 blur-2xl opacity-40 pointer-events-none bg-center bg-cover"
+            style={{ backgroundImage: `url(${heroBgUrl})` }}
+          />
+
+          <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/9] lg:aspect-[21/9] min-h-[260px] sm:min-h-[360px] md:min-h-[460px] max-h-[620px] flex items-center justify-center p-2 sm:p-4 md:p-6 overflow-hidden">
             <img
               src={heroBgUrl}
               alt="Mimix — Ganhe gravando seu dia a dia. Arte sci-fi neon original."
-              className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+              className="relative z-10 max-w-full max-h-full w-auto h-auto object-contain object-center transition-transform duration-700 ease-out group-hover:scale-[1.01] drop-shadow-[0_10px_35px_rgba(0,255,136,0.25)]"
               loading="eager"
               fetchPriority="high"
             />
 
-            {/* Vinheta e iluminação neon atmosférica */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#080d15] via-transparent to-black/40 pointer-events-none" />
-            <div className="absolute inset-0 ring-1 ring-inset ring-[#00ff88]/20 pointer-events-none" />
+            {/* Vinheta suave e iluminação neon atmosférica */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#080d15] via-transparent to-black/30 pointer-events-none z-10" />
+            <div className="absolute inset-0 ring-1 ring-inset ring-[#00ff88]/20 pointer-events-none z-10" />
 
             {/* Badges flutuantes no topo da moldura neon */}
-            <div className="absolute top-3 left-3 sm:top-5 sm:left-5 z-20 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-[#00ff88]/50 text-xs sm:text-sm font-semibold text-white shadow-[0_0_15px_rgba(0,255,136,0.3)]">
+            <div className="absolute top-3 left-3 sm:top-5 sm:left-5 z-20 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/85 backdrop-blur-md border border-[#00ff88]/50 text-xs sm:text-sm font-semibold text-white shadow-[0_0_15px_rgba(0,255,136,0.3)]">
               <span className="w-2 h-2 rounded-full bg-[#00ff88] animate-pulse" />
               <span className="text-[#00ff88]">Vagas Abertas</span>
               <span className="text-white/70 text-xs hidden sm:inline">
@@ -52,7 +59,7 @@ export const Hero = ({ heroBgUrl }: HeroProps) => {
               </span>
             </div>
 
-            <div className="absolute top-3 right-3 sm:top-5 sm:right-5 z-20 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-[#00e5ff]/50 text-xs sm:text-sm font-semibold text-[#00e5ff] shadow-[0_0_15px_rgba(0,229,255,0.3)]">
+            <div className="absolute top-3 right-3 sm:top-5 sm:right-5 z-20 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/85 backdrop-blur-md border border-[#00e5ff]/50 text-xs sm:text-sm font-semibold text-[#00e5ff] shadow-[0_0_15px_rgba(0,229,255,0.3)]">
               <span>✦ IA Física &amp; Robótica</span>
             </div>
           </div>
