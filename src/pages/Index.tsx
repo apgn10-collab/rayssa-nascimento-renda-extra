@@ -7,10 +7,9 @@ import { FeaturedNews } from '@/components/landing/FeaturedNews'
 import { RealTasksSegments } from '@/components/landing/RealTasksSegments'
 import { RobotShowcase } from '@/components/landing/RobotShowcase'
 import { GlobalPress } from '@/components/landing/GlobalPress'
-import { PaymentProofs } from '@/components/landing/PaymentProofs'
-import { StatsAndSimulator } from '@/components/landing/StatsAndSimulator'
+import { IndustryStats } from '@/components/landing/IndustryStats'
 import { FinalConversion } from '@/components/landing/FinalConversion'
-import { LANDING_IMAGES, LANDING_PROOFS } from '@/lib/images'
+import { LANDING_IMAGES } from '@/lib/images'
 
 export default function Index() {
   return (
@@ -18,7 +17,7 @@ export default function Index() {
       <Header logoUrl={LANDING_IMAGES.logo.url} />
       <Hero heroBgUrl={LANDING_IMAGES.heroBg.url} />
       <NewsTicker />
-      {/* Seção de Segmentos Reais com as 3 Fotos Distribuídas Abaixo do Hero */}
+      {/* Seção de Segmentos Reais com as Fotos Distribuídas Abaixo do Hero */}
       <RealTasksSegments
         foldingClothesImg={LANDING_IMAGES.foldingClothes.url}
         dogWalkImg={LANDING_IMAGES.dogWalkRoutine.url}
@@ -38,8 +37,7 @@ export default function Index() {
       <FeaturedNews />
       <RobotShowcase robotPhotoUrl={LANDING_IMAGES.robotPhoto.url} />
       <GlobalPress />
-      <PaymentProofs proofs={LANDING_PROOFS} />
-      <StatsAndSimulator />
+      <IndustryStats />
       <FinalConversion finalBgUrl={LANDING_IMAGES.finalBg.url} />
     </>
   )

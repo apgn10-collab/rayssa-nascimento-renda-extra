@@ -92,19 +92,19 @@ export const LANDING_IMAGES = {
     url: new URL('../assets/imagemgerada1791409236463-aaec7.png', import.meta.url).href,
     thumb: new URL('../assets/imagemgerada1791409236463-aaec7.png', import.meta.url).href,
   },
-  // Slot reservado 1: Próxima imagem a ser enviada pelo usuário (ex: cozinha / culinária / escritório)
+  // Slot reservado 1: Arte "DO BRIEFING AO DADO REAL" com mãos manipulando cabos, blocos e organizadores
   slotUpcoming1: {
-    recordId: 'slot_upcoming_1',
-    filename: 'slot_upcoming_1.png',
-    url: '', // Aguardando upload da 4ª foto do usuário
-    thumb: '',
+    recordId: 'slot_briefing_dado_real',
+    filename: 'imagemgerada1791412107846-049ab.png',
+    url: new URL('../assets/imagemgerada1791412107846-049ab.png', import.meta.url).href,
+    thumb: new URL('../assets/imagemgerada1791412107846-049ab.png', import.meta.url).href,
   },
-  // Slot reservado 2: Próxima imagem a ser enviada pelo usuário (ex: organização / logística / comércio)
+  // Slot reservado 2: Arte "PET SHOP: BANHO E TOSA — O TRABALHO DA SUA EQUIPE EM AÇÃO" com tosadora e cachorro
   slotUpcoming2: {
-    recordId: 'slot_upcoming_2',
-    filename: 'slot_upcoming_2.png',
-    url: '', // Aguardando upload da 5ª foto do usuário
-    thumb: '',
+    recordId: 'slot_petshop_banho_tosa',
+    filename: 'imagemgerada1791412105950-47fdb.png',
+    url: new URL('../assets/imagemgerada1791412105950-47fdb.png', import.meta.url).href,
+    thumb: new URL('../assets/imagemgerada1791412105950-47fdb.png', import.meta.url).href,
   },
   step1: {
     recordId: 'g5ckaj4e4ncu2q7',
@@ -125,10 +125,11 @@ export const LANDING_IMAGES = {
     thumb: getFileUrl('qaqdk3hteozqt7y', 'step_3_y14wb02jdh.png', '720x0'),
   },
   robotPhoto: {
-    recordId: '9zp2gi2fkuctf2j',
-    filename: 'robot_ivp4xnsig8.png',
-    url: getFileUrl('9zp2gi2fkuctf2j', 'robot_ivp4xnsig8.png'),
-    thumb: getFileUrl('9zp2gi2fkuctf2j', 'robot_ivp4xnsig8.png', '960x0'),
+    recordId: 'robot_holograms_office',
+    filename: 'imagemgerada1791412272862-516ed.png',
+    url: new URL('../assets/imagemgerada1791412272862-516ed.png', import.meta.url).href,
+    thumb: new URL('../assets/imagemgerada1791412272862-516ed.png', import.meta.url).href,
+    fallbackUrl: getFileUrl('9zp2gi2fkuctf2j', 'robot_ivp4xnsig8.png'),
   },
   finalBg: {
     recordId: '755o11p04hxg7gl',
@@ -137,120 +138,3 @@ export const LANDING_IMAGES = {
     thumb: getFileUrl('755o11p04hxg7gl', 'final_bg_h8i2j2cotv.png', '1200x0'),
   },
 } as const
-
-export interface ProofImageDef {
-  id: number
-  recordId: string
-  filename: string
-  url: string
-  thumbUrl: string
-  caption: string
-  amount: string
-  type: string
-}
-
-/**
- * 10 comprovantes reais de saque / Pix salvos permanentemente
- */
-export const LANDING_PROOFS: ProofImageDef[] = [
-  {
-    id: 1,
-    recordId: 'v15zuzaph62vjgs',
-    filename: 'proof_1_ef3rmig07h.jpg',
-    url: getFileUrl('v15zuzaph62vjgs', 'proof_1_ef3rmig07h.jpg'),
-    thumbUrl: getFileUrl('v15zuzaph62vjgs', 'proof_1_ef3rmig07h.jpg', '600x0'),
-    caption: 'R$ 291,98 · Pix recebido',
-    amount: 'R$ 291,98',
-    type: 'Pix recebido',
-  },
-  {
-    id: 2,
-    recordId: 'lfgxuv0wpzkgt5y',
-    filename: 'proof_2_po0a5gkfyc.jpg',
-    url: getFileUrl('lfgxuv0wpzkgt5y', 'proof_2_po0a5gkfyc.jpg'),
-    thumbUrl: getFileUrl('lfgxuv0wpzkgt5y', 'proof_2_po0a5gkfyc.jpg', '600x0'),
-    caption: 'R$ 279,00 · Pix recebido',
-    amount: 'R$ 279,00',
-    type: 'Pix recebido',
-  },
-  {
-    id: 3,
-    recordId: '0vv9hpn1q97j2j5',
-    filename: 'proof_3_yixiooyv32.jpg',
-    url: getFileUrl('0vv9hpn1q97j2j5', 'proof_3_yixiooyv32.jpg'),
-    thumbUrl: getFileUrl('0vv9hpn1q97j2j5', 'proof_3_yixiooyv32.jpg', '600x0'),
-    caption: 'R$ 115,81 · Pix recebido',
-    amount: 'R$ 115,81',
-    type: 'Pix recebido',
-  },
-  {
-    id: 4,
-    recordId: '85ka10h1j5mkyvg',
-    filename: 'proof_4_tfkh9dly80.jpg',
-    url: getFileUrl('85ka10h1j5mkyvg', 'proof_4_tfkh9dly80.jpg'),
-    thumbUrl: getFileUrl('85ka10h1j5mkyvg', 'proof_4_tfkh9dly80.jpg', '600x0'),
-    caption: 'Saque Pix · Sicredi · 05/10',
-    amount: 'Saque Pix',
-    type: 'Sicredi 05/10',
-  },
-  {
-    id: 5,
-    recordId: 'p2gnpr7kd6z3hbe',
-    filename: 'proof_5_rx53w96qwb.jpg',
-    url: getFileUrl('p2gnpr7kd6z3hbe', 'proof_5_rx53w96qwb.jpg'),
-    thumbUrl: getFileUrl('p2gnpr7kd6z3hbe', 'proof_5_rx53w96qwb.jpg', '600x0'),
-    caption: 'R$ 70,61 · Pix recebido 05/10',
-    amount: 'R$ 70,61',
-    type: 'Pix recebido 05/10',
-  },
-  {
-    id: 6,
-    recordId: '5bz7u4ddh04yryd',
-    filename: 'proof_6_8z2c4hhz3l.jpg',
-    url: getFileUrl('5bz7u4ddh04yryd', 'proof_6_8z2c4hhz3l.jpg'),
-    thumbUrl: getFileUrl('5bz7u4ddh04yryd', 'proof_6_8z2c4hhz3l.jpg', '600x0'),
-    caption: 'R$ 63,60 · Pix recebido',
-    amount: 'R$ 63,60',
-    type: 'Pix recebido',
-  },
-  {
-    id: 7,
-    recordId: 'fzw5n90459sv372',
-    filename: 'proof_7_krldw7xaim.jpg',
-    url: getFileUrl('fzw5n90459sv372', 'proof_7_krldw7xaim.jpg'),
-    thumbUrl: getFileUrl('fzw5n90459sv372', 'proof_7_krldw7xaim.jpg', '600x0'),
-    caption: 'R$ 63,60 · Pix Sicredi',
-    amount: 'R$ 63,60',
-    type: 'Pix Sicredi',
-  },
-  {
-    id: 8,
-    recordId: '248jn8ghmu5fpun',
-    filename: 'proof_8_rtnbuyms0y.jpg',
-    url: getFileUrl('248jn8ghmu5fpun', 'proof_8_rtnbuyms0y.jpg'),
-    thumbUrl: getFileUrl('248jn8ghmu5fpun', 'proof_8_rtnbuyms0y.jpg', '600x0'),
-    caption: 'R$ 48,74 · Pix recebido 05/10',
-    amount: 'R$ 48,74',
-    type: 'Pix recebido 05/10',
-  },
-  {
-    id: 9,
-    recordId: 'jlljh6f3qnjjo16',
-    filename: 'proof_9_y7na8j1q08.jpg',
-    url: getFileUrl('jlljh6f3qnjjo16', 'proof_9_y7na8j1q08.jpg'),
-    thumbUrl: getFileUrl('jlljh6f3qnjjo16', 'proof_9_y7na8j1q08.jpg', '600x0'),
-    caption: 'R$ 33,25 · Pix recebido',
-    amount: 'R$ 33,25',
-    type: 'Pix recebido',
-  },
-  {
-    id: 10,
-    recordId: '3xhq3duigssqxt6',
-    filename: 'proof_10_5puvqz1ny3.jpg',
-    url: getFileUrl('3xhq3duigssqxt6', 'proof_10_5puvqz1ny3.jpg'),
-    thumbUrl: getFileUrl('3xhq3duigssqxt6', 'proof_10_5puvqz1ny3.jpg', '600x0'),
-    caption: 'R$ 31,37 · Pix recebido',
-    amount: 'R$ 31,37',
-    type: 'Saque via Pix aprovado',
-  },
-]

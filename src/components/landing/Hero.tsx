@@ -94,10 +94,10 @@ export const Hero = ({ heroBgUrl }: HeroProps) => {
             </a>
 
             <a
-              href="#comprovantes"
+              href="#tarefas-reais"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm sm:text-base text-[#e2e8f0] bg-[#0f172a]/80 border border-[#00e5ff]/45 backdrop-blur-md transition-all duration-200 hover:border-[#00e5ff] hover:text-[#00e5ff] hover:shadow-[0_0_20px_rgba(0,229,255,0.3)] hover:-translate-y-0.5"
             >
-              <span>Ver comprovantes de saque</span>
+              <span>Ver tarefas aceitas</span>
               <svg
                 width="16"
                 height="16"

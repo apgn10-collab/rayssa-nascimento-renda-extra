@@ -19,8 +19,8 @@ export const RobotShowcase = ({ robotPhotoUrl }: RobotShowcaseProps) => {
               {!photoError ? (
                 <img
                   src={robotPhotoUrl}
-                  alt="Pesquisa em robôs humanoides aprendendo tarefas domésticas"
-                  className="w-full h-full object-cover block transition-transform duration-700 group-hover:scale-105 opacity-90"
+                  alt="Modelos de IA física e robótica — robô humanoide analisando hologramas de objetos e rotinas do dia a dia"
+                  className="w-full h-full object-cover block transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                   onError={() => setPhotoError(true)}
                 />
@@ -40,7 +40,7 @@ export const RobotShowcase = ({ robotPhotoUrl }: RobotShowcaseProps) => {
               </div>
 
               <h2 className="text-2xl sm:text-3xl font-extrabold text-white leading-snug mb-3">
-                Por que a IA precisa dos seus movimentos diários?
+                Modelos de IA física e robótica: por que precisam dos seus movimentos?
               </h2>
 
               <p className="text-base sm:text-lg font-bold text-[#00ff88] mb-3">
@@ -48,9 +48,9 @@ export const RobotShowcase = ({ robotPhotoUrl }: RobotShowcaseProps) => {
               </p>
 
               <p className="text-[#94a3b8] text-sm sm:text-base leading-relaxed mb-6">
-                Dobrar uma camiseta com caimento natural, segurar a guia de um pet ou esticar o
-                lençol exigem percepção tátil e espacial que só seres humanos executam com
-                perfeição.
+                Dobrar uma camiseta com caimento natural, manusear objetos e cabos, cuidar de pets
+                ou esticar o lençol exigem percepção tátil e espacial que só seres humanos executam
+                com perfeição. Seus vídeos alimentam a visão computacional e a destreza dos robôs.
               </p>
 
               <a

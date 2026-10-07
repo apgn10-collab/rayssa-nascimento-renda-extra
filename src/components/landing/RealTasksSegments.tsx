@@ -244,90 +244,149 @@ export const RealTasksSegments = ({
         </ScrollReveal>
       </div>
 
-      {/* BLOCO DE EXPANSÃO: ESTRUTURA PREPARADA PARA AS PRÓXIMAS 2 FOTOS DO USUÁRIO */}
+      {/* BLOCO DE EXPANSÃO: 2 NOVAS CATEGORIAS INTEGRADAS COM FOTOS REAIS DO PROJETO */}
       <ScrollReveal className="mt-8">
-        <div className="p-6 sm:p-8 rounded-2xl bg-[#090d15] border border-dashed border-white/15">
-          <div className="flex items-center justify-between flex-wrap gap-3 mb-4">
+        <div className="p-6 sm:p-8 rounded-3xl bg-[#090d15] border border-white/15 shadow-[0_12px_40px_rgba(0,0,0,0.5)]">
+          <div className="flex items-center justify-between flex-wrap gap-3 mb-6">
             <div className="flex items-center gap-2">
-              <span className="text-lg">📸</span>
-              <span className="text-sm font-bold uppercase tracking-wider text-white">
-                Próximas categorias em expansão (Novas tarefas chegando)
+              <span className="text-xl">✨</span>
+              <span className="text-sm sm:text-base font-bold uppercase tracking-wider text-white">
+                Novos segmentos em ação • Coletas sob demanda
               </span>
             </div>
-            <span className="text-xs text-[#94a3b8] font-mono">
-              2 novos segmentos em homologação
+            <span className="text-xs text-[#00ff88] font-mono px-3 py-1 rounded-full bg-[#00ff88]/10 border border-[#00ff88]/30">
+              ● Coletas ativas no app
             </span>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* Slot Futuro 1: Cozinha / Gastronomia / Lavanderia */}
-            <div className="p-4 sm:p-5 rounded-xl bg-[#0e141f] border border-white/10 relative overflow-hidden group">
-              <div className="flex items-start justify-between gap-3 mb-2">
-                <div>
-                  <span className="inline-block text-[0.7rem] uppercase tracking-wider font-bold px-2 py-0.5 rounded bg-[#00ff88]/15 text-[#00ff88] mb-1">
-                    Slot Reservado 1
-                  </span>
-                  <h4 className="text-base font-bold text-white">
-                    Culinária, Lavanderia &amp; Utensílios
-                  </h4>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Espaço 1: Do Briefing ao Dado Real */}
+            <div className="flex flex-col rounded-2xl bg-[#0b111a] border border-[#ff8800]/40 overflow-hidden group shadow-[0_10px_30px_rgba(0,0,0,0.5)] transition-all duration-300 hover:border-[#ffaa33] hover:-translate-y-1">
+              <div className="relative w-full aspect-square sm:aspect-[4/3] bg-[#05080e] overflow-hidden flex items-center justify-center">
+                {slot1Img && !slot1Error ? (
+                  <img
+                    src={slot1Img}
+                    alt="Do Briefing ao Dado Real — Coleta de dados sob demanda: perfis, ambientes, tarefas e volume"
+                    className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
+                    onError={() => setSlot1Error(true)}
+                  />
+                ) : (
+                  <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center text-[#ffaa33]">
+                    <span className="text-5xl mb-2">📦</span>
+                    <span className="font-bold">Do Briefing ao Dado Real</span>
+                  </div>
+                )}
+                <div className="absolute top-3 left-3 z-10 px-3 py-1 rounded-full bg-black/85 backdrop-blur-md border border-[#ff8800]/50 text-xs font-semibold text-[#ffaa33]">
+                  Perfis • Ambientes • Tarefas
                 </div>
-                <span className="text-2xl opacity-60">🍳</span>
               </div>
-              <p className="text-xs sm:text-sm text-[#94a3b8] mb-3">
-                {slot1Img && !slot1Error
-                  ? 'Foto adicionada e pronta para publicação.'
-                  : 'Espaço preparado para receber a próxima foto do usuário mostrando tarefas na cozinha, corte de alimentos, lavagem ou dobra de toalhas.'}
-              </p>
-              {slot1Img && !slot1Error ? (
-                <img
-                  src={slot1Img}
-                  alt="Segmento de Culinária e Lavanderia"
-                  className="w-full h-44 object-cover rounded-lg border border-white/10"
-                  onError={() => setSlot1Error(true)}
-                />
-              ) : (
-                <div className="h-28 rounded-lg bg-[#070a10] border border-dashed border-[#00ff88]/30 flex flex-col items-center justify-center text-center p-3 text-xs text-[#64748b]">
-                  <span className="text-[#00ff88] font-medium mb-0.5">
-                    Aguardando 4ª foto do usuário
-                  </span>
-                  <span>(Encaixe automático neste slot)</span>
+
+              <div className="p-6 flex flex-col flex-grow bg-[#0c121c]">
+                <div className="flex items-center gap-2 mb-2 text-xs font-mono text-[#ffaa33]">
+                  <span>DADOS ESTRUTURADOS</span>
+                  <span>•</span>
+                  <span>MANUSEIO DE OBJETOS</span>
                 </div>
-              )}
+                <h4 className="text-lg sm:text-xl font-bold text-white mb-2 leading-snug">
+                  Do briefing ao dado real: objetos, cabos e organizadores
+                </h4>
+                <p className="text-[#cbd5e1] text-xs sm:text-sm leading-relaxed mb-4">
+                  Seu projeto de IA exige uma coleta feita para ele. Separação de cabos em sacos,
+                  encaixe de blocos e empacotamento em caixas organizadoras fornecem dados
+                  contextuais e diversos prontos para robôs.
+                </p>
+                <ul className="space-y-1.5 text-xs text-[#94a3b8] mb-5">
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#ffaa33]">✔</span> Coleta sob demanda com validação de
+                    escopo
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#ffaa33]">✔</span> Percepção de profundidade e destreza
+                    fina
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#ffaa33]">✔</span> Dados diversos, contextuais e
+                    estruturados
+                  </li>
+                </ul>
+
+                <div className="mt-auto pt-3 border-t border-white/5 flex items-center justify-between">
+                  <span className="text-xs text-[#64748b]">Minute &amp; Mimix</span>
+                  <a
+                    href={LANDING_LINKS.whatsappGroup}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#ffaa33] hover:underline"
+                  >
+                    <span>Gravar tarefas</span>
+                    <span>→</span>
+                  </a>
+                </div>
+              </div>
             </div>
 
-            {/* Slot Futuro 2: Comércio / Estoque / Organização comercial */}
-            <div className="p-4 sm:p-5 rounded-xl bg-[#0e141f] border border-white/10 relative overflow-hidden group">
-              <div className="flex items-start justify-between gap-3 mb-2">
-                <div>
-                  <span className="inline-block text-[0.7rem] uppercase tracking-wider font-bold px-2 py-0.5 rounded bg-[#38bdf8]/15 text-[#38bdf8] mb-1">
-                    Slot Reservado 2
-                  </span>
-                  <h4 className="text-base font-bold text-white">
-                    Estoque, Lojas &amp; Organização
-                  </h4>
+            {/* Espaço 2: Pet Shop: Banho e Tosa — O trabalho da sua equipe em ação */}
+            <div className="flex flex-col rounded-2xl bg-[#0b111a] border border-[#00ff88]/40 overflow-hidden group shadow-[0_10px_30px_rgba(0,0,0,0.5)] transition-all duration-300 hover:border-[#00ff88] hover:-translate-y-1">
+              <div className="relative w-full aspect-square sm:aspect-[4/3] bg-[#05080e] overflow-hidden flex items-center justify-center">
+                {slot2Img && !slot2Error ? (
+                  <img
+                    src={slot2Img}
+                    alt="Pet Shop: Banho e Tosa — O trabalho da sua equipe em ação. Banho, secagem e escovação"
+                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
+                    onError={() => setSlot2Error(true)}
+                  />
+                ) : (
+                  <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center text-[#00ff88]">
+                    <span className="text-5xl mb-2">✂️</span>
+                    <span className="font-bold">Pet Shop: Banho e Tosa</span>
+                  </div>
+                )}
+                <div className="absolute top-3 left-3 z-10 px-3 py-1 rounded-full bg-black/85 backdrop-blur-md border border-[#00ff88]/50 text-xs font-semibold text-[#00ff88]">
+                  Pet Shop &amp; Equipes
                 </div>
-                <span className="text-2xl opacity-60">📦</span>
               </div>
-              <p className="text-xs sm:text-sm text-[#94a3b8] mb-3">
-                {slot2Img && !slot2Error
-                  ? 'Foto adicionada e pronta para publicação.'
-                  : 'Espaço preparado para receber a 5ª foto do usuário retratando reposição de prateleiras, manuseio de caixas ou catalogação.'}
-              </p>
-              {slot2Img && !slot2Error ? (
-                <img
-                  src={slot2Img}
-                  alt="Segmento de Estoque e Comércio"
-                  className="w-full h-44 object-cover rounded-lg border border-white/10"
-                  onError={() => setSlot2Error(true)}
-                />
-              ) : (
-                <div className="h-28 rounded-lg bg-[#070a10] border border-dashed border-[#38bdf8]/30 flex flex-col items-center justify-center text-center p-3 text-xs text-[#64748b]">
-                  <span className="text-[#38bdf8] font-medium mb-0.5">
-                    Aguardando 5ª foto do usuário
-                  </span>
-                  <span>(Encaixe automático neste slot)</span>
+
+              <div className="p-6 flex flex-col flex-grow bg-[#0c121c]">
+                <div className="flex items-center gap-2 mb-2 text-xs font-mono text-[#00ff88]">
+                  <span>EQUIPES EM AÇÃO</span>
+                  <span>•</span>
+                  <span>BANHO E TOSA</span>
                 </div>
-              )}
+                <h4 className="text-lg sm:text-xl font-bold text-white mb-2 leading-snug">
+                  Pet Shop: banho, secagem e tosa de animais
+                </h4>
+                <p className="text-[#cbd5e1] text-xs sm:text-sm leading-relaxed mb-4">
+                  O trabalho da sua equipe em ação. Tosadoras e assistentes gravam banho, secagem,
+                  escovação e cuidados em cada etapa, participando de pilotos de coleta remunerados.
+                </p>
+                <ul className="space-y-1.5 text-xs text-[#94a3b8] mb-5">
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#00ff88]">✔</span> Banho, secagem e escovação com cuidado
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#00ff88]">✔</span> Ideal para pet shops, clínicas e
+                    profissionais
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#00ff88]">✔</span> Remuneração por minuto e lote aprovado
+                  </li>
+                </ul>
+
+                <div className="mt-auto pt-3 border-t border-white/5 flex items-center justify-between">
+                  <span className="text-xs text-[#64748b]">Equipes e autônomos</span>
+                  <a
+                    href={LANDING_LINKS.whatsappGroup}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#00ff88] hover:underline"
+                  >
+                    <span>Participar com pet shop</span>
+                    <span>→</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
