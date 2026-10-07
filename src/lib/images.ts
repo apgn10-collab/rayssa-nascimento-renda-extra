@@ -123,7 +123,7 @@ export const LANDING_IMAGES = {
     url: new URL('../assets/1-0dcd3.jpeg', import.meta.url).href,
     thumb: new URL('../assets/1-0dcd3.jpeg', import.meta.url).href,
   },
-  // Passo 3 de "Como Funciona": Nova Arte "PAGAMENTO VIA PIX / PAGAMENTO VIA USDT" (dias 08 e 20 de cada mês)
+  // Passo 3 de "Como Funciona": Nova Arte "PAGAMENTO VIA PIX / PAGAMENTO VIA USDT" (dia 5 e dia 20 de cada mês)
   howItWorksPayoutPixUsdt: {
     recordId: 'payout_pix_usdt_art',
     filename: 'imagemgerada1791414158612-d8c4a.png',

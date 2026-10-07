@@ -174,7 +174,7 @@ export const HowItWorks = ({
               {!err3 ? (
                 <img
                   src={step3Thumb || step3Img}
-                  alt="Regras de pagamento oficial: Pagamento via Pix ou USDT mediante vídeos aprovados todo dia 08 e 20 de cada mês"
+                  alt="Regras de pagamento oficial: Pagamento via Pix ou USDT mediante vídeos aprovados todo dia 5 e dia 20 de cada mês"
                   className="w-full h-full object-contain p-1.5 transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                   onError={(e) => {
@@ -199,7 +199,7 @@ export const HowItWorks = ({
                 3
               </span>
               <div className="absolute bottom-3 left-3 right-3 z-10 px-2.5 py-1 rounded-lg bg-black/85 backdrop-blur-md border border-[#fbbf24]/50 text-[0.72rem] text-center text-[#fde047] font-semibold">
-                Pagamentos dia 08 e dia 20 de cada mês
+                Pagamentos dia 5 e dia 20 de cada mês
               </div>
             </div>
 
@@ -212,7 +212,7 @@ export const HowItWorks = ({
               </h3>
               <p className="text-[#cbd5e1] text-sm sm:text-[0.93rem] leading-relaxed mb-3">
                 Pagamento mediante vídeos aprovados. Os repasses acontecem pontualmente no{' '}
-                <strong className="text-[#00ff88] font-bold">dia 08 e dia 20 de cada mês</strong>{' '}
+                <strong className="text-[#00ff88] font-bold">dia 5 e dia 20 de cada mês</strong>{' '}
                 diretamente na sua chave Pix ou carteira USDT.
               </p>
               <div className="mt-auto pt-3 border-t border-white/5 text-xs text-[#94a3b8] flex items-center justify-between">
