@@ -43,7 +43,17 @@ export function getFileUrl(recordId: string, filename: string, thumb?: string): 
 /**
  * 17 registros confirmados na coleção landing_images
  */
+// Capas de notícias reais fornecidas pelo usuário
+import cnnCoverImg from '../assets/captura-de-tela-2026-10-07-191838-cdf91.png'
+import tecmundoEstadaoCoverImg from '../assets/captura-de-tela-2026-10-07-191956-93749.png'
+import diarioNordesteCoverImg from '../assets/captura-de-tela-2026-10-07-192027-116b2.png'
+
 export const LANDING_IMAGES = {
+  newsCovers: {
+    cnn: cnnCoverImg,
+    tecmundoEstadao: tecmundoEstadaoCoverImg,
+    diarioNordeste: diarioNordesteCoverImg,
+  },
   logo: {
     recordId: 'ezupxqgn9idesxp',
     filename: 'logo_fpf5eun48d.jpg',

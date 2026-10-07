@@ -3,9 +3,10 @@ export const LANDING_LINKS = {
   mimixRegister: 'https://mimix-ai.xyz/register?ref=equipedesucesso',
   news: {
     cnn: 'https://www.cnnbrasil.com.br/economia/money/tecnologia/como-gravar-tarefas-domesticas-pode-treinar-robos-mordomos-no-futuro/',
-    ocorre: 'https://ocorre.com/tech/hub-videos-cotidiano-treinar-robos/',
     tecmundo:
       'https://www.tecmundo.com.br/ciencia/414223-como-trabalhadores-estao-filmando-empregos-para-treinar-ia-entenda.htm',
+    estadao:
+      'https://www.estadao.com.br/tecmundo/stem/414223-como-trabalhadores-estao-filmando-empregos-para-treinar-ia-entenda/',
     diarioNordeste:
       'https://diariodonordeste.verdesmares.com.br/negocios/cearenses-ganham-ate-r-4-mil-com-videos-para-treinar-robos-e-ias-entenda-tendencia-e-riscos-1.3790363',
     mit: 'https://www.technologyreview.com/2026/04/01/1134863/humanoid-data-training-gig-economy-2026-breakthrough-technology',
