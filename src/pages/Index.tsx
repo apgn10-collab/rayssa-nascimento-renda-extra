@@ -18,8 +18,9 @@ export default function Index() {
       <Header logoUrl={LANDING_IMAGES.logo.url} />
       <Hero heroBgUrl={LANDING_IMAGES.heroBg.url} />
       <NewsTicker />
-      {/* Nova Seção de Segmentos com Foto 2 (Rotina/Dog Walk) e Foto 3 (Hotelaria/Enxoval) */}
+      {/* Seção de Segmentos Reais com as 3 Fotos Distribuídas Abaixo do Hero */}
       <RealTasksSegments
+        foldingClothesImg={LANDING_IMAGES.foldingClothes.url}
         dogWalkImg={LANDING_IMAGES.dogWalkRoutine.url}
         hotelImg={LANDING_IMAGES.hotelHospitality.url}
         slot1Img={LANDING_IMAGES.slotUpcoming1.url}

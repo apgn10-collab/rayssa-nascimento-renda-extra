@@ -51,22 +51,31 @@ export const LANDING_IMAGES = {
     // Avatar / Logo circular no header (~70x70)
     thumb: getFileUrl('ezupxqgn9idesxp', 'logo_fpf5eun48d.jpg', '160x160'),
   },
-  // Nova Foto 1: Mãos dobrando camiseta azul com overlay IA ("Sua rotina pode treinar o futuro")
+  // Hero Original: Arte sci-fi neon (imagemgerada1791407667490-15f6d.png)
   heroBg: {
     recordId: 'makqmcwi65rllwk',
-    filename: 'imagemgerada1791409240317-1b3c0.png',
-    url: new URL('../assets/imagemgerada1791409240317-1b3c0.png', import.meta.url).href,
-    thumb: new URL('../assets/imagemgerada1791409240317-1b3c0.png', import.meta.url).href,
+    filename: 'imagemgerada1791407667490-15f6d.png',
+    url: new URL('../assets/imagemgerada1791407667490-15f6d.png', import.meta.url).href,
+    thumb: new URL('../assets/imagemgerada1791407667490-15f6d.png', import.meta.url).href,
     fallbackUrl: getFileUrl('makqmcwi65rllwk', 'hero_bg_6iqeoy4vnk.png'),
   },
-  // Nova Foto 2: POV passeio com cachorro ("Sua rotina ajuda a IA física a entender o mundo real")
+  // Foto Realista 1: Mãos dobrando camiseta azul ("Sua rotina pode treinar o futuro" - tarefas reais / IA física)
+  foldingClothes: {
+    recordId: 'folding_clothes_routine',
+    filename: 'imagemgerada1791409240317-0c20d.png',
+    url: new URL('../assets/imagemgerada1791409240317-0c20d.png', import.meta.url).href,
+    thumb: new URL('../assets/imagemgerada1791409240317-0c20d.png', import.meta.url).href,
+    altUrl: new URL('../assets/imagemgerada1791409240317-1b3c0.png', import.meta.url).href,
+  },
+  // Foto Realista 2: POV passeio com cachorro Border Collie ("Sua rotina ajuda a IA física a entender o mundo real")
   dogWalkRoutine: {
     recordId: 'dog_walk_routine_local',
-    filename: 'imagemgerada1791409238291-239b7.png',
-    url: new URL('../assets/imagemgerada1791409238291-239b7.png', import.meta.url).href,
-    thumb: new URL('../assets/imagemgerada1791409238291-239b7.png', import.meta.url).href,
+    filename: 'imagemgerada1791409238291-3de3b.png',
+    url: new URL('../assets/imagemgerada1791409238291-3de3b.png', import.meta.url).href,
+    thumb: new URL('../assets/imagemgerada1791409238291-3de3b.png', import.meta.url).href,
+    altUrl: new URL('../assets/imagemgerada1791409238291-239b7.png', import.meta.url).href,
   },
-  // Nova Foto 3: Camareiras de hotelaria ("Hotelaria: Sua equipe pode participar")
+  // Foto Realista 3: Hotelaria / Camareiras ("Hotelaria: Sua equipe pode participar")
   hotelHospitality: {
     recordId: 'hotel_hospitality_local',
     filename: 'imagemgerada1791409236463-aaec7.png',

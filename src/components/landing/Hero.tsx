@@ -28,30 +28,32 @@ export const Hero = ({ heroBgUrl }: HeroProps) => {
           className="absolute -top-32 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#00e5ff]/15 rounded-full blur-[100px] pointer-events-none"
         />
 
-        {/* HERO IMAGE CONTAINER - Showcase da Foto 1 com proporção natural para preservar os textos embutidos */}
-        <div className="relative w-full max-w-[720px] mx-auto bg-[#02060c] overflow-hidden group rounded-t-3xl">
-          <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] max-h-[700px] mx-auto flex items-center justify-center bg-[#070b12]">
+        {/* HERO IMAGE CONTAINER - Arte Sci-Fi Neon Original (imagemgerada1791407667490-15f6d.png) */}
+        <div className="relative w-full overflow-hidden group rounded-t-3xl bg-[#030712]">
+          <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] md:aspect-[21/9] max-h-[580px] flex items-center justify-center overflow-hidden">
             <img
               src={heroBgUrl}
-              alt="Sua rotina pode treinar o futuro — tarefas reais, dados para IA física com Rayssa Nascimento"
-              className="w-full h-full object-contain sm:object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.01]"
+              alt="Mimix — Ganhe gravando seu dia a dia. Arte sci-fi neon original."
+              className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.02]"
               loading="eager"
               fetchPriority="high"
             />
 
-            {/* Suave vinheta perimetral sem cobrir os textos da arte */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#080d15] via-transparent to-black/30 pointer-events-none" />
-            <div className="absolute inset-0 ring-1 ring-inset ring-white/10 pointer-events-none" />
+            {/* Vinheta e iluminação neon atmosférica */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#080d15] via-transparent to-black/40 pointer-events-none" />
+            <div className="absolute inset-0 ring-1 ring-inset ring-[#00ff88]/20 pointer-events-none" />
 
-            {/* Badges sutis no topo da imagem */}
-            <div className="absolute top-3 left-3 sm:top-5 sm:left-5 z-20 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/75 backdrop-blur-md border border-[#00ff88]/40 text-xs sm:text-sm font-semibold text-white shadow-lg">
+            {/* Badges flutuantes no topo da moldura neon */}
+            <div className="absolute top-3 left-3 sm:top-5 sm:left-5 z-20 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-[#00ff88]/50 text-xs sm:text-sm font-semibold text-white shadow-[0_0_15px_rgba(0,255,136,0.3)]">
               <span className="w-2 h-2 rounded-full bg-[#00ff88] animate-pulse" />
               <span className="text-[#00ff88]">Vagas Abertas</span>
-              <span className="text-white/70 text-xs">• Brasil &amp; 70+ Países</span>
+              <span className="text-white/70 text-xs hidden sm:inline">
+                • Brasil &amp; 70+ Países
+              </span>
             </div>
 
-            <div className="absolute top-3 right-3 sm:top-5 sm:right-5 z-20 hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/75 backdrop-blur-md border border-[#38bdf8]/40 text-xs font-semibold text-[#38bdf8] shadow-lg">
-              <span>IA Física &amp; Robótica</span>
+            <div className="absolute top-3 right-3 sm:top-5 sm:right-5 z-20 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-[#00e5ff]/50 text-xs sm:text-sm font-semibold text-[#00e5ff] shadow-[0_0_15px_rgba(0,229,255,0.3)]">
+              <span>✦ IA Física &amp; Robótica</span>
             </div>
           </div>
         </div>
