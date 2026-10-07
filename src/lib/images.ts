@@ -106,23 +106,44 @@ export const LANDING_IMAGES = {
     url: new URL('../assets/imagemgerada1791412105950-47fdb.png', import.meta.url).href,
     thumb: new URL('../assets/imagemgerada1791412105950-47fdb.png', import.meta.url).href,
   },
+  // Passo 1 de "Como Funciona": Print da tela do app Mimix ("Tarefas.")
+  howItWorksChooseTask: {
+    recordId: 'mimix_app_tasks_screen',
+    filename: 'minute-21ed1.jpeg',
+    url: new URL('../assets/minute-21ed1.jpeg', import.meta.url).href,
+    thumb: new URL('../assets/minute-21ed1.jpeg', import.meta.url).href,
+  },
+  // Passo 2 de "Como Funciona": Foto da mulher com suporte de cabeça (head-mount) gravando tarefas cotidianas
+  howItWorksRecordTask: {
+    recordId: 'woman_headmount_recording',
+    filename: '1-0dcd3.jpeg',
+    url: new URL('../assets/1-0dcd3.jpeg', import.meta.url).href,
+    thumb: new URL('../assets/1-0dcd3.jpeg', import.meta.url).href,
+  },
+  // Passo 3 de "Como Funciona": Arte "PAGAMENTO VIA PIX / PAGAMENTO VIA USDT" (dias 08 e 20)
+  howItWorksPayoutPixUsdt: {
+    recordId: 'payout_pix_usdt_art',
+    filename: 'imagemgerada1791413124291-636fa.png',
+    url: new URL('../assets/imagemgerada1791413124291-636fa.png', import.meta.url).href,
+    thumb: new URL('../assets/imagemgerada1791413124291-636fa.png', import.meta.url).href,
+  },
   step1: {
     recordId: 'g5ckaj4e4ncu2q7',
-    filename: 'step_1_6pi44d40v6.png',
-    url: getFileUrl('g5ckaj4e4ncu2q7', 'step_1_6pi44d40v6.png'),
-    thumb: getFileUrl('g5ckaj4e4ncu2q7', 'step_1_6pi44d40v6.png', '720x0'),
+    filename: 'minute-21ed1.jpeg',
+    url: new URL('../assets/minute-21ed1.jpeg', import.meta.url).href,
+    thumb: new URL('../assets/minute-21ed1.jpeg', import.meta.url).href,
   },
   step2Minute: {
     recordId: 'zc8kr2rthf97ytd',
-    filename: 'step_2_minute_2fyav24mvq.jpg',
-    url: getFileUrl('zc8kr2rthf97ytd', 'step_2_minute_2fyav24mvq.jpg'),
-    thumb: getFileUrl('zc8kr2rthf97ytd', 'step_2_minute_2fyav24mvq.jpg', '720x0'),
+    filename: '1-0dcd3.jpeg',
+    url: new URL('../assets/1-0dcd3.jpeg', import.meta.url).href,
+    thumb: new URL('../assets/1-0dcd3.jpeg', import.meta.url).href,
   },
   step3Payout: {
     recordId: 'qaqdk3hteozqt7y',
-    filename: 'step_3_y14wb02jdh.png',
-    url: getFileUrl('qaqdk3hteozqt7y', 'step_3_y14wb02jdh.png'),
-    thumb: getFileUrl('qaqdk3hteozqt7y', 'step_3_y14wb02jdh.png', '720x0'),
+    filename: 'imagemgerada1791413124291-636fa.png',
+    url: new URL('../assets/imagemgerada1791413124291-636fa.png', import.meta.url).href,
+    thumb: new URL('../assets/imagemgerada1791413124291-636fa.png', import.meta.url).href,
   },
   robotPhoto: {
     recordId: 'robot_holograms_office',

@@ -26,12 +26,12 @@ export default function Index() {
         slot2Img={LANDING_IMAGES.slotUpcoming2.url}
       />
       <HowItWorks
-        step1Img={LANDING_IMAGES.step1.url}
-        step1Thumb={LANDING_IMAGES.step1.thumb}
-        step2Img={LANDING_IMAGES.step2Minute.url}
-        step2Thumb={LANDING_IMAGES.step2Minute.thumb}
-        step3Img={LANDING_IMAGES.step3Payout.url}
-        step3Thumb={LANDING_IMAGES.step3Payout.thumb}
+        step1Img={LANDING_IMAGES.howItWorksChooseTask.url}
+        step1Thumb={LANDING_IMAGES.howItWorksChooseTask.thumb}
+        step2Img={LANDING_IMAGES.howItWorksRecordTask.url}
+        step2Thumb={LANDING_IMAGES.howItWorksRecordTask.thumb}
+        step3Img={LANDING_IMAGES.howItWorksPayoutPixUsdt.url}
+        step3Thumb={LANDING_IMAGES.howItWorksPayoutPixUsdt.thumb}
       />
       <ReferralBlock />
       <FeaturedNews />
