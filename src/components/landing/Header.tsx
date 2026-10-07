@@ -18,12 +18,12 @@ export const Header = ({ logoUrl }: HeaderProps) => {
           <div className="flex items-center gap-3 sm:gap-4.5">
             <div
               className="w-12 h-12 sm:w-[70px] sm:h-[70px] rounded-full border-2 border-[#fbbf24]/85 shadow-[0_0_18px_rgba(251,191,36,0.45),0_0_26px_rgba(0,255,136,0.25)] overflow-hidden flex items-center justify-center bg-[#090e18] shrink-0 transition-transform duration-200 hover:scale-105"
-              title="Geração Alpha"
+              title="Rayssa Nascimento Renda Extra"
             >
               {!logoError ? (
                 <img
                   src={logoUrl}
-                  alt="Logo Geração Alpha"
+                  alt="Logo Rayssa Nascimento Renda Extra"
                   className="w-full h-full object-cover object-[center_30%] block rounded-full"
                   loading="eager"
                   onError={() => setLogoError(true)}
@@ -33,16 +33,16 @@ export const Header = ({ logoUrl }: HeaderProps) => {
                   className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#162030] to-[#090e18] text-[#fbbf24] font-mono text-xl sm:text-2xl font-extrabold tracking-wider shadow-[0_0_12px_rgba(251,191,36,0.6)]"
                   aria-hidden="true"
                 >
-                  GA
+                  RN
                 </span>
               )}
             </div>
 
             <div className="flex flex-col gap-0.5">
               <div className="text-lg sm:text-2xl font-extrabold tracking-[1.8px] sm:tracking-[2.5px] leading-tight flex items-center gap-1.5">
-                <span className="text-white">GERAÇÃO</span>
+                <span className="text-white">RAYSSA NASCIMENTO</span>
                 <span className="text-[#fbbf24] drop-shadow-[0_0_14px_rgba(251,191,36,0.45)]">
-                  ALPHA
+                  RENDA EXTRA
                 </span>
               </div>
               <div className="text-xs sm:text-[0.95rem] font-semibold text-[#00ff88] tracking-wide leading-tight drop-shadow-[0_0_10px_rgba(0,255,136,0.35)]">
@@ -55,10 +55,10 @@ export const Header = ({ logoUrl }: HeaderProps) => {
           <div className="hidden sm:flex items-center">
             <div
               className="inline-flex items-center gap-2 px-4 py-2 bg-[#0e1520]/85 border border-[#00ff88]/35 rounded-full text-[0.9rem] font-semibold text-[#e2e8f0] shadow-[0_0_14px_rgba(0,255,136,0.12)] transition-all duration-200 hover:border-[#00ff88] hover:text-white hover:shadow-[0_0_20px_rgba(0,255,136,0.3)] hover:-translate-y-0.5 whitespace-nowrap cursor-default"
-              title="Parceria oficial Geração Alpha e Mimix"
+              title="Parceria Rayssa Nascimento / Mimix"
             >
               <span aria-hidden="true">🤝</span>
-              <span>Parceria Geração Alpha × Mimix</span>
+              <span>Parceria Rayssa Nascimento / Mimix</span>
             </div>
           </div>
         </nav>

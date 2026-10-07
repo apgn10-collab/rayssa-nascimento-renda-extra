@@ -16,7 +16,7 @@ export const Hero = ({ heroBgUrl }: HeroProps) => {
 
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-medium bg-[#00e5ff]/10 border border-[#00e5ff]/35 text-[#e2e8f0] shadow-[0_0_10px_rgba(0,229,255,0.18)]">
           <span className="text-[#00e5ff]">✦</span>
-          <span>Iniciativa Geração Alpha × Mimix</span>
+          <span>Iniciativa Rayssa Nascimento / Mimix</span>
         </div>
       </div>
 

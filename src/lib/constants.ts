@@ -1,6 +1,6 @@
 export const LANDING_LINKS = {
-  whatsappGroup: 'https://chat.whatsapp.com/BArmNUKNfvEEbPDzZiJmiM?s=sh&p=a&mlu=4&ilr=4',
-  mimixRegister: 'https://mimix-ai.xyz/register?ref=MIMIX89B954E7BA0A4190',
+  whatsappGroup: 'https://chat.whatsapp.com/BcEfAKAnpDv3kGTQl46Tq3?s=qt&p=i&mlu=0&iam=0',
+  mimixRegister: 'https://mimix-ai.xyz/register?ref=equipedesucesso',
   news: {
     cnn: 'https://www.cnnbrasil.com.br/economia/money/tecnologia/como-gravar-tarefas-domesticas-pode-treinar-robos-mordomos-no-futuro/',
     ocorre: 'https://ocorre.com/tech/hub-videos-cotidiano-treinar-robos/',

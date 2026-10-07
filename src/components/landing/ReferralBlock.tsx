@@ -102,12 +102,28 @@ export const ReferralBlock = () => {
                   {LANDING_LINKS.mimixRegister}
                 </a>
               </div>
+
+              {/* Aviso de segurança e domínio oficial */}
+              <div className="mt-3 flex items-center justify-center gap-1.5 text-xs text-[#94a3b8]">
+                <span aria-hidden="true">ⓘ</span>
+                <span>
+                  Cadastro e login acontecem sempre no site oficial{' '}
+                  <a
+                    href={LANDING_LINKS.mimixRegister}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-bold text-white hover:text-[#00ff88] underline underline-offset-2 transition-colors"
+                  >
+                    mimix-ai.xyz
+                  </a>
+                </span>
+              </div>
             </div>
 
             {/* Microtext */}
             <p className="text-xs sm:text-sm text-[#94a3b8] max-w-[680px] mx-auto leading-relaxed m-0">
-              Cadastro gratuito pela plataforma parceira Mimix — indicação Geração Alpha · Dúvidas?
-              O suporte gratuito te ajuda.
+              Cadastro gratuito pela plataforma parceira Mimix — indicação Rayssa Nascimento Renda
+              Extra · Dúvidas? O suporte gratuito te ajuda.
             </p>
           </div>
         </div>

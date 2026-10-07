@@ -84,10 +84,10 @@ export const Layout = ({ children }: LayoutProps) => {
         <footer className="w-full border-t border-white/10 bg-[#040608] py-10 px-4 text-[#64748b] text-[0.85rem] mt-12">
           <div className="max-w-[780px] mx-auto text-center space-y-3">
             <p className="text-[0.82rem] leading-relaxed text-[#94a3b8]">
-              Página criada por Geração Alpha © <span>{currentYear}</span> — Todos os direitos
-              reservados. Mimix é uma plataforma parceira. Esta página não garante ganhos; os
-              valores citados vêm das matérias de notícias vinculadas e variam conforme plataforma,
-              região e volume aprovado.
+              Página criada por Rayssa Nascimento Renda Extra © <span>{currentYear}</span> — Todos
+              os direitos reservados. Mimix é uma plataforma parceira. Esta página não garante
+              ganhos; os valores citados vêm das matérias de notícias vinculadas e variam conforme
+              plataforma, região e volume aprovado.
             </p>
             <p className="text-xs text-[#64748b]">
               Mimix é uma plataforma parceira · Dúvidas? O suporte gratuito te ajuda.
