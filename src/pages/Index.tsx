@@ -11,10 +11,6 @@ import { IndustryStats } from '@/components/landing/IndustryStats'
 import { FinalConversion } from '@/components/landing/FinalConversion'
 import { LANDING_IMAGES } from '@/lib/images'
 
-// Ensure og-image and favicon are linked in build
-import heroOgImage from '@/assets/imagemgerada1791407667490-15f6d.png'
-import rayssaFavicon from '@/assets/4-6c579.jpeg'
-
 export default function Index() {
   return (
     <>
