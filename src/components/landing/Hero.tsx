@@ -1,10 +1,12 @@
-import { LANDING_LINKS } from '@/lib/constants'
+import { siteConfig } from '@/config/site'
 
 interface HeroProps {
-  heroBgUrl: string
+  heroBgUrl?: string
 }
 
-export const Hero = ({ heroBgUrl }: HeroProps) => {
+export const Hero = ({ heroBgUrl = siteConfig.images.heroImage }: HeroProps) => {
+  const { partner, images, links } = siteConfig
+
   return (
     <section className="pt-4 sm:pt-6 pb-10 sm:pb-12">
       {/* Top badges */}
@@ -16,7 +18,7 @@ export const Hero = ({ heroBgUrl }: HeroProps) => {
 
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-medium bg-[#00e5ff]/10 border border-[#00e5ff]/35 text-[#e2e8f0] shadow-[0_0_10px_rgba(0,229,255,0.18)]">
           <span className="text-[#00e5ff]">✦</span>
-          <span>Iniciativa Rayssa Nascimento / Mimix</span>
+          <span>{partner.heroBadgeLabel}</span>
         </div>
       </div>
 
@@ -28,7 +30,7 @@ export const Hero = ({ heroBgUrl }: HeroProps) => {
           className="absolute -top-32 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#00e5ff]/15 rounded-full blur-[100px] pointer-events-none"
         />
 
-        {/* HERO IMAGE CONTAINER - Arte Sci-Fi Neon Original (imagemgerada1791407667490-15f6d.png) */}
+        {/* HERO IMAGE CONTAINER - Arte Sci-Fi Neon Centralizada */}
         <div className="relative w-full overflow-hidden group rounded-t-3xl bg-[#030712]">
           {/* Subtle blurred neon ambient background from the image itself to eliminate empty borders */}
           <div
@@ -40,7 +42,7 @@ export const Hero = ({ heroBgUrl }: HeroProps) => {
           <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/9] lg:aspect-[21/9] min-h-[260px] sm:min-h-[360px] md:min-h-[460px] max-h-[620px] flex items-center justify-center p-2 sm:p-4 md:p-6 overflow-hidden">
             <img
               src={heroBgUrl}
-              alt="Mimix — Ganhe gravando seu dia a dia. Arte sci-fi neon original."
+              alt={images.heroImageAlt}
               className="relative z-10 max-w-full max-h-full w-auto h-auto object-contain object-center transition-transform duration-700 ease-out group-hover:scale-[1.01] drop-shadow-[0_10px_35px_rgba(0,255,136,0.25)]"
               loading="eager"
               fetchPriority="high"
@@ -81,7 +83,7 @@ export const Hero = ({ heroBgUrl }: HeroProps) => {
           {/* CTA Buttons Group */}
           <div className="flex flex-col sm:flex-row gap-3.5 justify-center items-center flex-wrap mb-4">
             <a
-              href={LANDING_LINKS.whatsappGroup}
+              href={links.whatsappGroup}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-extrabold text-base text-[#021a0e] bg-gradient-to-br from-[#00ff88] to-[#00d26a] shadow-[0_0_25px_rgba(0,255,136,0.5)] transition-all duration-200 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_0_45px_rgba(0,255,136,0.9),0_0_70px_rgba(0,229,255,0.5)] animate-glow-pulse"

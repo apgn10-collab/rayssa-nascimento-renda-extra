@@ -11,11 +11,13 @@ import { IndustryStats } from '@/components/landing/IndustryStats'
 import { FinalConversion } from '@/components/landing/FinalConversion'
 import { LANDING_IMAGES } from '@/lib/images'
 
+import { siteConfig } from '@/config/site'
+
 export default function Index() {
   return (
     <>
-      <Header logoUrl={LANDING_IMAGES.logo.url} />
-      <Hero heroBgUrl={LANDING_IMAGES.heroBg.url} />
+      <Header logoUrl={siteConfig.images.avatarImage || LANDING_IMAGES.logo.url} />
+      <Hero heroBgUrl={siteConfig.images.heroImage || LANDING_IMAGES.heroBg.url} />
       <NewsTicker />
       {/* Seção de Segmentos Reais com as Fotos Distribuídas Abaixo do Hero */}
       <RealTasksSegments

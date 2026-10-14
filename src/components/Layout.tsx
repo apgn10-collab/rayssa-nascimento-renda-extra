@@ -1,6 +1,6 @@
 import { useEffect, useState, type ReactNode } from 'react'
 import { WhatsAppIcon } from './WhatsAppIcon'
-import { LANDING_LINKS } from '@/lib/constants'
+import { siteConfig } from '@/config/site'
 
 interface LayoutProps {
   children?: ReactNode
@@ -9,6 +9,7 @@ interface LayoutProps {
 export const Layout = ({ children }: LayoutProps) => {
   const [scrollProgress, setScrollProgress] = useState(0)
   const currentYear = new Date().getFullYear()
+  const { partner, links } = siteConfig
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,7 +66,7 @@ export const Layout = ({ children }: LayoutProps) => {
 
       {/* Floating Sticky WhatsApp Pill (Always visible) */}
       <a
-        href={LANDING_LINKS.whatsappGroup}
+        href={links.whatsappGroup}
         target="_blank"
         rel="noopener noreferrer"
         id="floatingCta"
@@ -84,10 +85,10 @@ export const Layout = ({ children }: LayoutProps) => {
         <footer className="w-full border-t border-white/10 bg-[#040608] py-10 px-4 text-[#64748b] text-[0.85rem] mt-12">
           <div className="max-w-[780px] mx-auto text-center space-y-3">
             <p className="text-[0.82rem] leading-relaxed text-[#94a3b8]">
-              Página criada por Rayssa Nascimento Renda Extra © <span>{currentYear}</span> — Todos
-              os direitos reservados. Mimix é uma plataforma parceira. Esta página não garante
-              ganhos; os valores citados vêm das matérias de notícias vinculadas e variam conforme
-              plataforma, região e volume aprovado.
+              {partner.footerCredit} © <span>{currentYear}</span> — Todos os direitos reservados.
+              Mimix é uma plataforma parceira. Esta página não garante ganhos; os valores citados
+              vêm das matérias de notícias vinculadas e variam conforme plataforma, região e volume
+              aprovado.
             </p>
             <p className="text-xs text-[#64748b]">
               Mimix é uma plataforma parceira · Dúvidas? O suporte gratuito te ajuda.

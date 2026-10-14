@@ -1,8 +1,11 @@
 import { WhatsAppIcon } from '../WhatsAppIcon'
-import { LANDING_LINKS } from '@/lib/constants'
+import { siteConfig } from '@/config/site'
 import { ScrollReveal } from '../ScrollReveal'
 
 export const ReferralBlock = () => {
+  const { partner, links } = siteConfig
+  const registerUrl = links.mimix.registerUrl
+
   return (
     <section className="py-8">
       <ScrollReveal>
@@ -42,7 +45,7 @@ export const ReferralBlock = () => {
 
               <div>
                 <a
-                  href={LANDING_LINKS.whatsappGroup}
+                  href={links.whatsappGroup}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-extrabold text-base sm:text-lg text-[#021a0e] bg-gradient-to-br from-[#00ff88] to-[#00d26a] shadow-[0_0_25px_rgba(0,255,136,0.5)] transition-all duration-200 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_0_45px_rgba(0,255,136,0.9),0_0_70px_rgba(0,229,255,0.5)] cursor-pointer"
@@ -69,7 +72,7 @@ export const ReferralBlock = () => {
 
               <div>
                 <a
-                  href={LANDING_LINKS.mimixRegister}
+                  href={registerUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-extrabold text-sm sm:text-base text-[#021a0e] bg-gradient-to-br from-[#00ff88] to-[#00d26a] shadow-[0_0_25px_rgba(0,255,136,0.5)] transition-all duration-200 hover:-translate-y-1 hover:scale-105"
@@ -93,13 +96,13 @@ export const ReferralBlock = () => {
               <div className="mt-4 inline-flex items-center justify-center gap-2 px-4 py-2 bg-[#060a10]/85 border border-[#00ff88]/30 rounded-xl max-w-full overflow-hidden">
                 <span className="text-xs sm:text-sm text-[#94a3b8]">Link:</span>
                 <a
-                  href={LANDING_LINKS.mimixRegister}
+                  href={registerUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-mono text-xs sm:text-sm font-bold text-[#00ff88] underline underline-offset-4 decoration-1 break-all hover:text-[#55ffb2] hover:drop-shadow-[0_0_12px_rgba(0,255,136,0.7)]"
                   title="Abrir página oficial de cadastro da Mimix"
                 >
-                  {LANDING_LINKS.mimixRegister}
+                  {registerUrl}
                 </a>
               </div>
 
@@ -109,7 +112,7 @@ export const ReferralBlock = () => {
                 <span>
                   Cadastro e login acontecem sempre no site oficial{' '}
                   <a
-                    href={LANDING_LINKS.mimixRegister}
+                    href={registerUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-bold text-white hover:text-[#00ff88] underline underline-offset-2 transition-colors"
@@ -122,8 +125,7 @@ export const ReferralBlock = () => {
 
             {/* Microtext */}
             <p className="text-xs sm:text-sm text-[#94a3b8] max-w-[680px] mx-auto leading-relaxed m-0">
-              Cadastro gratuito pela plataforma parceira Mimix — indicação Rayssa Nascimento Renda
-              Extra · Dúvidas? O suporte gratuito te ajuda.
+              {partner.referralCredit}
             </p>
           </div>
         </div>

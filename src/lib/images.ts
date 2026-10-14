@@ -56,7 +56,7 @@ export const LANDING_IMAGES = {
     tecmundoEstadao: tecmundoEstadaoCoverImg,
     diarioNordeste: diarioNordesteCoverImg,
   },
-  // Foto de retrato oficial de Rayssa Nascimento (substituindo o antigo monograma/placeholder RN)
+  // Foto de retrato oficial do parceiro (configurada em src/config/site.ts)
   logo: {
     recordId: 'rayssa_nascimento_portrait',
     filename: '4-6c579.jpeg',
@@ -64,7 +64,7 @@ export const LANDING_IMAGES = {
     thumb: rayssaPortraitImg,
     fallbackUrl: getFileUrl('ezupxqgn9idesxp', 'logo_fpf5eun48d.jpg'),
   },
-  // Hero Original: Arte sci-fi neon (imagemgerada1791407667490-15f6d.png)
+  // Hero: Imagem principal / arte sci-fi neon (configurada em src/config/site.ts)
   heroBg: {
     recordId: 'makqmcwi65rllwk',
     filename: 'imagemgerada1791407667490-15f6d.png',
