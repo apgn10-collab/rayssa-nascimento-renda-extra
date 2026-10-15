@@ -150,7 +150,7 @@ export const siteConfig: SiteConfig = {
 
   links: {
     // Link do grupo de WhatsApp — replicado em TODOS os botões
-    whatsappGroup: 'https://chat.whatsapp.com/BcEfAKAnpDv3kGTQl46Tq3?s=qt&p=i&mlu=0&iam=0',
+    whatsappGroup: 'https://wa.me/qr/SWOGSDANSPUWF1?s=r',
 
     // Cadastro Mimix com o parâmetro 'ref' isolado para fácil substituição por cada parceiro
     mimix: {
